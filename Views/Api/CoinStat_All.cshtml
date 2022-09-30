@@ -1,0 +1,26 @@
+@{
+    ViewBag.Title = "CoinStat";
+}
+@model List<Api>
+
+
+
+<table class="table table-striped pushDown">
+    <thead>
+        <tr>
+            <th>price</th>
+            <th>exchange</th>
+            <th>pair</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.price</td>
+                <td>@item.exchange</td>
+                <td>@item.pair</td>
+            </tr>
+        }
+    </tbody>
+</table>
